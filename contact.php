@@ -152,8 +152,8 @@
             width: 100%;
             border-radius: 0.375rem;
             background-color: transparent;
-            color: #3C8DBC;
-            border: 2px solid #3C8DBC;
+            color: #14295D;
+            border: 2px solid #14295D;
             padding: 0.75rem 1.5rem;
             font-weight: 500;
             cursor: pointer;
@@ -161,7 +161,7 @@
         }
 
         .submit-btn:hover {
-            background-color: #3C8DBC;
+            background-color: #14295D;
             color:white;
         }
 
@@ -190,7 +190,7 @@
     </style>
 
 </head>
-<body>
+<body id="page-wrapper" class="page-enter">
 
 <div id="site-content" class="hidden">
     <div>
@@ -198,26 +198,26 @@
         <!-- Navbar End -->
         <div class="content">
             <div class="div d-flex" style="width: 100% !important;">
-                <div class="contact_info d-flex flex-column justify-content-center" style="padding: 5%; background-color: #3C8DBC; width: 50vw; color:white;">
+                <div class="contact_info d-flex flex-column justify-content-center" style="padding: 5%; background-color: #14295D; width: 50vw; color:white;">
                     <div class="header-content">
-                        <h1 style="color: #FFE08A; font-size: 45px; margin: 0;">Կապ մեզ հետ</h1>
-                        <h2 style="color: white; font-size: 20px;">
+                        <h1 style="color: #D7A95A !important; font-size: 45px; margin: 0;">Կապ մեզ հետ</h1>
+                        <p style="color: white; font-size: 18px; font-weight: 100 !important;" class="mt-1">
                             Ուղարկեք ձեր հարցերն, առաջարկները կամ մեկնաբանությունները նշված ձևաթղթի միջոցով։ Մեր թիմը ձեզ կպատասխանի հնարավորինս շուտ՝ տրամադրելով մասնագիտական և օգտակար աջակցություն։
 
-                            Անհրաժեշտ է նշել ձեր անունը, էլ․ հասցեն և հաղորդագրությունը՝ պարզ և հստակ հաղորդակցության համար։</h2>
+                            Անհրաժեշտ է նշել ձեր անունը, էլ․ հասցեն և հաղորդագրությունը՝ պարզ և հստակ հաղորդակցության համար։</p>
                     </div>
                     <div>
-                        <p style="color: #FFE08A; font-size: 25px;">Հեռախոսահամար</p>
+                        <p style="color: #D7A95A !important; font-size: 25px;">Հեռախոսահամար</p>
                         <span>+374 12 777-797
                         </span>
                     </div>
                     <div>
-                        <p style="color: #FFE08A; font-size: 25px;">Էլ․ Հասցե</p>
+                        <p style="color: #D7A95A !important; font-size: 25px;">Էլ․ Հասցե</p>
                         <span>info@fuelsolutions.group</span>
                     </div>
                     <div>
-                        <p style="color: #FFE08A; font-size: 25px;">Հասցե</p>
-                        <span>Ք․ Երևան, Հրաչյա Քոչար 228</span>
+                        <p style="color: #D7A95A !important; font-size: 25px;">Հասցե</p>
+                        <span>Ք․ Երևան, Հրաչյա Քոչար 228/1</span>
                     </div>
                 </div>
                 <div class="send_sms" style="padding: 5%; width: 50vw">
@@ -226,14 +226,14 @@
                             <form action="https://formbold.com/s/FORM_ID" method="POST">
                                 <!-- Title and Description -->
                                 <div class="form-header">
-                                    <h2 class="form-title">Ուղարկել նամակ</h2>
-                                    <p class="form-description">
+                                    <h2 class="form-title" style="color: #14295D">Ուղարկել նամակ</h2>
+                                    <p class="form-description" style="color: #365897">
                                         Ուղարկեք ձեր հարցերն ու հաղորդագրությունները ստորև նշված ձևաթղթով, և մեր թիմը հնարավորինս շուտ կպատասխանի։
                                 </div>
 
                                 <!-- Donor Information -->
                                 <div class="form-group">
-                                    <label for="fullname" class="form-label">Անուն</label>
+                                    <label for="fullname" class="form-label" style="color: #14295D; font-weight: 900">Անուն</label>
                                     <input
                                             type="text"
                                             name="fullname"
@@ -244,7 +244,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="email" class="form-label">Էլ․ հասցե</label>
+                                    <label for="email" class="form-label" style="color: #14295D; font-weight: 900">Էլ․ հասցե</label>
                                     <input
                                             type="email"
                                             name="email"
@@ -256,9 +256,8 @@
 
                                 <!-- Message / Note -->
                                 <div class="form-group">
-                                    <label for="message" class="form-label"
-                                    >Նամակ</label
-                                    >
+                                    <label for="message" class="form-label" style="color: #14295D; font-weight: 900"
+                                    >Նամակ</label>
                                     <textarea
                                             name="message"
                                             id="message"

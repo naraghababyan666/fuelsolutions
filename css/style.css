@@ -1,3 +1,26 @@
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden  !important;
+}
+/* Page enter animation */
+.page-enter {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: pageFadeUp 0.6s ease-out forwards;
+}
+
+@keyframes pageFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-second > div.row{
+    justify-content: center !important;
+    flex-wrap: wrap-reverse !important;
+}
 /* Features Section - Card Centered Design */
 .features-section {
     background: linear-gradient(135deg, #3C8DBC 0%, #5CB5E8 50%, #2E3192 100%);
@@ -283,10 +306,10 @@
     transform: translate(69%,66%) scale(0.5) rotate(45deg);
 }
 .i2 .outer_slide{
-    transform: translate(-69%,66%) scale(0.5) rotate(-45deg);
+    transform: translate(-80%,80%) scale(0.5) rotate(-45deg);
 }
 .i3 .outer_slide{
-    transform: translate(-69%,-66%) scale(0.5) rotate(-45deg);
+    transform: translate(-80%,-80%) scale(0.5) rotate(-45deg);
 }
 .i4 .outer_slide{
     transform: translate(69%,-66%) scale(0.5) rotate(45deg);
@@ -435,7 +458,7 @@ animation-play-state: paused;
 
 /********** Template CSS **********/
 :root {
-    --primary: #5CB5E8;
+    --primary: #14295D;
     --secondary: #F6F6F6;
     --light: #FFFFFF;
     --dark: #152440;
@@ -456,10 +479,10 @@ h1 {
     display: flex;
     padding: 2% 10% ;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .ncard {
-
     background-image: linear-gradient(to bottom right, #5CB5E8, #3559B0) !important;
     background-repeat: no-repeat;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -489,6 +512,7 @@ h1 {
 }
 
 .ncard p {
+    margin-top: 5px;
     opacity: 0.8;
     line-height: 1.5;
 }
@@ -566,7 +590,8 @@ h6,
 }
 
 .btn-primary {
-    color: #FFFFFF;
+    color: #A27751;
+    border: 1px solid #A27751;
 }
 
 .btn-square {
@@ -641,7 +666,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(21, 36, 64, .7);
+    background: rgb(0 21 59 / 42%);
     z-index: 1;
 }
 
@@ -742,3 +767,37 @@ h6,
 .blog-item:hover img {
     transform: scale(1.1);
 }
+
+/*@media (min-width: 320px) and (max-width: 575px) {*/
+/*    nav{*/
+/*        padding: 0 !important;*/
+/*    }*/
+/*    nav a img{*/
+/*        width: 50px !important;*/
+/*    }*/
+/*    nav a h1{*/
+/*        font-size: 20px !important;*/
+/*    }*/
+/*    .about-part img{*/
+/*        display: none !important;*/
+/*    }*/
+/*}*/
+
+/*!* Phones (portrait & landscape) *!*/
+/*@media (min-width: 576px) and (max-width: 767px) {*/
+/*}*/
+/*!* Tablets (portrait) *!*/
+/*@media (min-width: 768px) and (max-width: 991px) {*/
+/*}*/
+
+/*!* Tablets (landscape / small laptops) *!*/
+/*@media (min-width: 992px) and (max-width: 1199px) {*/
+/*}*/
+
+/*!* Standard desktops *!*/
+/*@media (min-width: 1200px) and (max-width: 1399px) {*/
+/*}*/
+
+/*!* Large desktops *!*/
+/*@media (min-width: 1400px) {*/
+/*}*/

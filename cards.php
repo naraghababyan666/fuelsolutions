@@ -1,11 +1,13 @@
 <?php include 'head.php'; ?>
     <style>
-        .contact_info > *{
+        .contact_info > * {
             margin-bottom: 20px;
         }
-         .contact_info > * > p{
-             margin: 0;
-         }
+
+        .contact_info > * > p {
+            margin: 0;
+        }
+
         /* General Body and Font Styles */
         body {
             font-family: "Inter", sans-serif;
@@ -161,7 +163,7 @@
 
         .submit-btn:hover {
             background-color: #003274;
-            color:white;
+            color: white;
         }
 
         .submit-btn:focus {
@@ -174,12 +176,15 @@
             .main-container {
                 padding: 1rem;
             }
+
             .form-wrapper {
                 padding: 1.5rem;
             }
+
             .form-title {
                 font-size: 1.5rem;
             }
+
             .donation-options,
             .payment-options {
                 flex-direction: column;
@@ -198,6 +203,7 @@
             gap: 2rem;
             padding: 20px 0px;
         }
+
         .card {
             --grad: #003274, #152440;
             padding: 2.5rem;
@@ -208,45 +214,54 @@
             grid-template: 'title icon' 'content content' 'bar bar' / 1fr auto;
             font-family: system-ui, sans-serif;
             color: #444447;
-            box-shadow:
-                    inset -2px 2px hsl(0 0 100% / 1),
-                    -20px 20px 40px hsl(0 0 0 / .25) ;
+            box-shadow: inset -2px 2px hsl(0 0 100% / 1),
+            -20px 20px 40px hsl(0 0 0 / .25);
 
             .title {
                 font-size: 1.5rem;
                 grid-area: title;
-                color: #14295D !important;
                 align-self: end;
                 text-transform: uppercase;
                 font-weight: 500;
                 word-break: break-all;
 
             }
+
             .outlined {
                 font-size: 26px;
                 font-weight: 900;
-                background: linear-gradient(90deg, #3C8DBC, #152440);
+                background: linear-gradient(90deg, #003274, #152440);
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
             }
+
             .content {
                 grid-area: content;
-                & > *:first-child { margin-top: 0rem}
-                & > *:last-child { margin-bottom: 0rem}
-                *{
+
+                & > *:first-child {
+                    margin-top: 0rem
+                }
+
+                & > *:last-child {
+                    margin-bottom: 0rem
+                }
+
+                * {
                     color: #365897;
                 }
             }
+
             &::after {
                 content: "";
                 grid-area: bar;
-                height: 1px;
-                background-image: linear-gradient(90deg, #A27751, #A27751);
+                height: 2px;
+                background-image: linear-gradient(90deg, var(--grad));
                 /*     margin-inline: -1.5rem; */
             }
         }
-        .content-header{
+
+        .content-header {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -255,136 +270,119 @@
             margin: 0px auto;
             text-align: center;
         }
-        .content-header h1{
+
+        .content-header h1 {
             color: #365897;
         }
-        .content-header p, h3{
+
+        .content-header p, h3 {
             color: #365897;
         }
     </style>
 
-<style>
-    @media (min-width: 320px) and (max-width: 767px) {
-        .services-container{
-            margin-top: 1.5rem !important;
+    <style>
+        @media (min-width: 320px) and (max-width: 767px) {
+            .services-container {
+                margin-top: 1.5rem !important;
+            }
+
+            .card-services {
+                /*padding:10px !important;*/
+            }
+
+            .card-services .card {
+                padding: 1.5rem !important;
+            }
         }
-        .card-services{
-            /*padding:10px !important;*/
+
+        /* Phones (portrait & landscape) */
+        @media (min-width: 576px) and (max-width: 767px) {
         }
-        .card-services .card{
-            padding: 1.5rem !important;
+
+        /* Tablets (portrait) */
+        @media (min-width: 768px) and (max-width: 991px) {
         }
-    }
 
-    /* Phones (portrait & landscape) */
-    @media (min-width: 576px) and (max-width: 767px) {
-    }
-    /* Tablets (portrait) */
-    @media (min-width: 768px) and (max-width: 991px) {
-    }
+        /* Tablets (landscape / small laptops) */
+        @media (min-width: 992px) and (max-width: 1199px) {
+        }
 
-    /* Tablets (landscape / small laptops) */
-    @media (min-width: 992px) and (max-width: 1199px) {
-    }
+        /* Standard desktops */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+        }
 
-    /* Standard desktops */
-    @media (min-width: 1200px) and (max-width: 1399px) {
-    }
-
-    /* Large desktops */
-    @media (min-width: 1400px) {
-    }
-</style>
+        /* Large desktops */
+        @media (min-width: 1400px) {
+        }
+    </style>
 <body id="page-wrapper" class="page-enter">
 
-<div id="site-content" class="hidden">
-    <div>
-        <!-- Topbar Start -->
+    <div id="site-content" class="hidden">
         <?php include 'header.php'; ?>
-        <!-- Navbar End -->
-        <div class="content-header services-container">
-            <h1 style="font-family: system-ui, sans-serif !important; color: #072267">Մեր ծառայությունները</h1>
-            <p style=" font-size: 18px; text-align: start">
-                Fuel Solutions–ը առաջարկում է վառելիքի և ավտոմոբիլային սպասարկման ծառայությունների ամբողջական փաթեթ՝ մեկ միասնական քարտի միջոցով։ Մեր լուծումները նախատեսված են ինչպես բիզնեսների, այնպես էլ անհատ օգտատերերի համար, ովքեր ցանկանում են ունենալ հարմար, արագ և վերահսկելի սպասարկում ամենօրյա ճանապարհային գործընթացներում։
 
-                <br />Մեկ քարտի միջոցով դուք կարող եք օգտվել վառելիքից և ավտոսպասարկման տարբեր ծառայություններից՝ առանց կանխիկի, ավելորդ փաստաթղթերի և անհարմարությունների։ Բոլոր գործարքները հաշվառվում են թափանցիկ և հասանելի են ծախսերի արդյունավետ կառավարման համար։
+        <section class="jumbotron text-center mt-5">
+            <div class="container">
+                <h1 class="jumbotron-heading">Վառելիքի քարտեր</h1>
+                <p class="lead text-muted">Ընտրեք ձեզ համար լավագույն առաջարկով վառելիքի քարտ</p>
+                <p class="lead text-muted">Եթե չգիտեք, թե որն է հարմար, թողեք հարցում՝ մենք կտրամադրենք մանրամասն
+                    խորհրդատվություն։</p>
+            </div>
+        </section>
+        <div class="container marketing"> <!-- Three columns of text below the carousel -->
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7"><h2 class="featurette-heading fw-normal lh-1">СТР</h2>
+                    <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
+                        prose
+                        here.</p></div>
+                <div class="col-md-5">
+                    <img src="img/123.jpg" width="500" height="300" style="border-radius: 10px"/>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2"><h2 class="featurette-heading fw-normal lh-1">СТР</h2>
+                    <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
+                        how
+                        this
+                        layout would work with some actual real-world content in place.</p></div>
+                <div class="col-md-5 order-md-1">
+                    <img src="img/132.jpg" width="500" height="300" style="border-radius: 10px"/>
+                </div>
+            </div>
+            <!--        <hr class="featurette-divider">-->
+            <!--        <div class="row featurette">-->
+            <!--            <div class="col-md-7"><h2 class="featurette-heading fw-normal lh-1">СТР</h2>-->
+            <!--                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really-->
+            <!--                    intended to be actually read, simply here to give you a better view of what this would look like-->
+            <!--                    with-->
+            <!--                    some actual content. Your content.</p></div>-->
+            <!--            <div class="col-md-5">-->
+            <!--                <img src="img/str.webp" width="500" height="300" style="border-radius: 10px"/>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <hr class="featurette-divider"> <!-- /END THE FEATURETTES -->
 
-                Ստորև ներկայացված են այն հիմնական ծառայությունները, որոնք հասանելի են Fuel Solutions քարտերով՝ ամբողջ Ռուսաստանում և որոշ ԱՊՀ երկրներում։
-            </p>
+
+
         </div>
-        <div class="grid-container card-services">
-            <div class="card">
-                <div class="title outlined">Բենզին</div>
-                <div class="content">
-                    <p>Բենզին, ներառյալ՝ ԱԻ-92 (Ռեգուլյար), ԱԻ-95 (Պրեմիում), ԱԻ-98 (Սուպեր), ավտոլցակայանների ցանցի բրենդային բենզիններ:</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="title outlined">Դիզել</div>
-                <div class="content">
-                    <p>Դիզելային վառելիք, ներառյալ՝ ԳՕՍՏ, ՏՊ, Եվրո-4, Եվրո-5 և ԱԼԿ ցանցի բրենդային դիզել:</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="title outlined">Գազ</div>
-                <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
-                <div class="content">
-                    <p>Հեղուկ Գազ/LPG <br /> Մեթան Գազ/CNG:</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title outlined">AdBlue</div>
-                <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
-                <div class="content">
-                    <p>Դիտեք  քարտեզը՝ AdBlue (միզանյութ)-ի հասանելիության ցանկը տեսնելու համար:</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title outlined">Ավտոլվացում</div>
-                <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
-                <div class="content">
-                    <p>Օգտվեք ավտոլվացման ծառայություններից՝ օգտագործելով Fuel Solutions քարտը:</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title outlined">Վուլկանացում</div>
-                <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
-                <div class="content">
-                    <p>Անվադողերի տեղադրումը կամ նորոգումը երբեք այսքան հարմարավետ և արագ չի եղել:</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title outlined">Քարշակ</div>
-                <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
-                <div class="content">
-                    <p>Ավտոքարշակի ծառայությունների հասանելիություն ամբողջ տարածաշրջանում:</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="title outlined">Կայանատեղիներ</div>
-                <div class="icon"><i class="fa-thin fa-wrench-simple"></i></div>
-                <div class="content">
-                    <p>Կայանատեղիներից օգտվելը նույնպես մեր քարտի առանձնահատկություններից է:</p>
+        <div class="bg-dark text-secondary px-4 py-5 text-center" style="width: 100% !important;">
+                <div class="col-lg-8 mx-auto"><p class="fs-5 mb-4">
+                        Մեր նպատակը վառելիքի ծախսերի կառավարման գործընթացը դարձնել առավել պարզ, թափանցիկ և վերահսկելի՝ օգնելով բիզնեսներին և անհատներին խնայել ռեսուրսներ և ընդունել ճիշտ ֆինանսական որոշումներ։
+<br />
+                        Fuel Solutions-ը առաջարկում է վառելիքի կառավարման նորարարական լուծումներ՝ խելացի վառելիքային քարտերի միջոցով, որոնք թույլ են տալիս վերահսկել ծախսերը, սահմանել օգտագործման սահմանափակումներ և ստանալ մանրամասն հաշվետվություններ իրական ժամանակում։
+<br />
+                        Մեր արժեքներն են վստահելիությունը, անվտանգությունը, նորարարությունը և հաճախորդակենտրոն մոտեցումը։ Մենք մշտապես զարգացնում ենք մեր համակարգերը՝ ապահովելով կայուն, արդյունավետ և ժամանակակից լուծումներ մեր գործընկերների համար։
+                    </p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Մեր մասին
+                        </button>
+                        <button type="button" class="btn btn-outline-light btn-lg px-4">Կապ</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <h3 style=" margin: 40px; text-align: center">Հարցերի դեպքում անցեք <a href="" style="color: #D7A95A;
-    border: 1px solid #D7A95A;
-    padding: 10px;
-    border-radius: 20px;">Կապ</a> բաժին։</h3>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Template Javascript -->
-        <script src="js/main.js"></script>
     </div>
-    <!-- Footer Start --> 
-     
-    <?php include 'footer.php'; ?>
-
-    <!-- Footer End -->
-<!--</div>-->
 
 </body>
-</html>
+<?php include 'footer.php'; ?>

@@ -43,3 +43,11 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", () => {
+    const page = document.getElementById("page-wrapper");
+    if (page) {
+        page.classList.remove("page-enter");
+        void page.offsetWidth; // force reflow
+        page.classList.add("page-enter");
+    }
+});

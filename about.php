@@ -4,7 +4,7 @@
         :root {
             --primary-purple: #5CB5E8;
             --purple-light: #f7f4ff;
-            --purple-dark: #3C8DBC;
+            --purple-dark: #003274;
             --text-primary: #5a5668;
             --text-secondary: #8b839d;
             --bg-primary: #fefffe;
@@ -33,11 +33,9 @@
             0%, 100% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-12px) rotate(180deg); }
         }
-
-        * {
-            box-sizing: border-box;
+        body{
+            padding: 0 !important;
         }
-
 
 
         .container {
@@ -84,7 +82,7 @@
         }
 
         .citations-header {
-            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-dark) 100%);
+            background-image: linear-gradient(to bottom, #14295D, #355bc5);
             color: white;
             padding: 1.8rem 2.5rem;
             cursor: pointer;
@@ -111,7 +109,7 @@
         }
 
         .citations-header:hover {
-            background: linear-gradient(135deg, var(--purple-dark) 0%, #6d5aa6 100%);
+            background-image: linear-gradient(to bottom, #14295D, #355bc5);
         }
 
         .citations-title {
@@ -183,7 +181,7 @@
         }
 
         .citation-number {
-            color: var(--primary-purple);
+            color: #365897;
             font-weight: 700;
             margin-right: 0.6rem;
             font-size: 0.95rem;
@@ -193,7 +191,7 @@
             font-size: 0.9rem;
             line-height: 1.6;
             font-weight: 400;
-            color: var(--text-primary);
+            color: #365897;
         }
 
         .citation-note {
@@ -209,7 +207,8 @@
         }
 
         .stats-section {
-        background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-dark) 100%);
+        /*background: linear-gradient(135deg, var(--primary-purple) 0%, var(--purple-dark) 100%);*/
+            background-image: linear-gradient(to bottom, #355bc5, #14295D) !important;
             border-radius: var(--border-radius);
             padding: 2rem;
             margin-bottom: 3rem;
@@ -243,13 +242,13 @@
         .stat-number {
             font-size: 1.4rem;
             font-weight: 700;
-            color: var(--primary-purple);
+            color: #14295D;
             display: block;
         }
 
         .stat-label {
             font-size: 0.85rem;
-            color: var(--text-secondary);
+            color: #365897;
             margin-top: 0.3rem;
             font-weight: 500;
         }
@@ -321,7 +320,7 @@
             }
 
             .citation-list {
-                padding: 1.5rem;
+                padding: 1rem;
             }
 
             .citations-content:not(.expanded) .citation-list {
@@ -492,8 +491,8 @@
             width: 100%;
             border-radius: 0.375rem;
             background-color: transparent;
-            color: #3C8DBC;
-            border: 2px solid #3C8DBC;
+            color: #003274;
+            border: 2px solid #003274;
             padding: 0.75rem 1.5rem;
             font-weight: 500;
             cursor: pointer;
@@ -501,7 +500,7 @@
         }
 
         .submit-btn:hover {
-            background-color: #3C8DBC;
+            background-color: #003274;
             color:white;
         }
 
@@ -529,34 +528,132 @@
         }
     </style>
 
-</head>
-<body>
+<style>
+    /* Gradient overlay */
+    .uslider::before,
+    .uslider::after {
+        background: linear-gradient(to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+        );
+        content: "";
+        height: 200px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+        top: 0;
+    }
+
+    /* Right gradient */
+    .uslider::after {
+        right: 0;
+        transform: rotate(180deg);
+    }
+
+    /* Left gradient */
+    .uslider::before {
+        left: 0;
+    }
+
+    /* Animation */
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-250px * 7));
+        }
+    }
+
+    /* Slider container */
+    .uslider {
+        background: #fff;
+        /*box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);*/
+        height: 200px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 80vw;
+    }
+
+    /* Track */
+    .uslide-track {
+        display: flex;
+        width: calc(250px * 14);
+        animation: scroll 20s linear infinite;
+    }
+
+    /* Single slide */
+    .uslide {
+        height: 200px;
+        width: 250px;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    .uslide img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+</style>
+
+<style>
+    @media (min-width: 320px) and (max-width: 767px) {
+        .about-page-container{
+            max-width: 100% !important;
+        }
+        .carousel-track .carousel-item{
+
+        }
+    }
+
+    /* Phones (portrait & landscape) */
+    @media (min-width: 576px) and (max-width: 767px) {
+    }
+    /* Tablets (portrait) */
+    @media (min-width: 768px) and (max-width: 991px) {
+    }
+
+    /* Tablets (landscape / small laptops) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+    }
+
+    /* Standard desktops */
+    @media (min-width: 1200px) and (max-width: 1399px) {
+    }
+
+    /* Large desktops */
+    @media (min-width: 1400px) {
+    }
+</style>
+<body id="page-wrapper" class="page-enter">
 
 <div id="site-content" class="hidden">
     <div>
         
         <?php include 'header.php'; ?>
-        <div class="container mt-4 text-start" >
+        <div class="container mt-4 text-start about-page-container" >
                 <header class="page-header">
-                    <h1 class="page-title mb-4">Վառելիքի ժամանակակից լուծումներ</h1>
-                    <p class="" style="text-align: start !important; width: 98%">
-                        Fuel Solutions ընկերությունը Հայաստանի տարածքում վառելիքի ժամանակակից քարտերի ոլորտում առաջատար և նորարար լուծումներ առաջարկող առաջին կազմակերպություններից մեկն է։ Ընկերության գործունեությունը մեկնարկել է 2018 թվականին, և այդ ընթացքում մենք ձևավորել ենք վստահելի համագործակցություն ավելի քան 500 գործընկերների հետ՝ ապահովելով բարձր որակ, ճկուն պայմաններ և կայուն արդյունքներ։ <br />
+                    <h1 class="page-title mb-4" style="color: #14295D">Վառելիքի ժամանակակից լուծումներ</h1>
+                    <p class="" style="text-align: start !important; width: 98%; color: #365897;">
+                        Fuel Solutions ընկերությունը վառելիքի քարտերի ոլորտում առաջատար և ժամանակակից լուծումներ առաջարկող առաջին ընկերությունն է Հայաստանում։ Ընկերության գործունեությունը մեկնարկել է 2018 թվականին, և այդ ընթացքում մենք ձևավորել ենք վստահելի համագործակցություն ավելի քան 500 գործընկերների հետ՝ ապահովելով բարձր որակ, ճկուն պայմաններ և կայուն արդյունքներ։ <br />
 
 
-                        <br />Մեր առաքելությունն է յուրաքանչյուր հաճախորդին առաջարկել առավել շահավետ և նպատակային լուծումներ, որոնք ամբողջապես համապատասխանում են նրա բիզնեսի առանձնահատկություններին և ծավալներին։ Մենք ապահովում ենք` <br />
-                    <ul style="text-align: start">
+                        <br />Մեր առաքելությունն է յուրաքանչյուր հաճախորդին առաջարկել առավել շահավետ և նպատակային լուծումներ, որոնք լիովին համապատասխանում են նրա բիզնեսի առանձնահատկություններին և ծավալներին։ Մենք ապահովում ենք` <br />
+                    <ul style="text-align: start; color: #365897;">
                         <li>վառելիքի քարտերի անհատականացված առաջարկներ՝ կախված հաճախորդի պահանջներից</li>
                         <li>անհատական զեղչային պայմաններ և ֆակտորինգային ծառայություններ՝ երկարաժամկետ համագործակցության համաձայնագրերով</li>
                         <li>մանրամասն և մասնագիտական խորհրդատվություն՝ վառելիքի կառավարման, հաշվետվությունների և օպտիմալացման բոլոր փուլերում</li>
                     </ul>
 
-                        <p class="text-start">Fuel Solutions վառելիքի քարտերը գործում են ամբողջ Ռուսաստանի տարածքում, ինչպես նաև որոշ ԱՊՀ երկրներում, ինչը մեր հաճախորդներին հնարավորություն է տալիս արդյունավետ կառավարել վառելիքի ծախսերը՝ անկախ գտնվելու վայրից։ Մեր լուծումները ապահովում են վերահսկելիություն, թափանցիկություն և ֆինանսական ճկունություն՝ դարձնելով վառելիքի կառավարումը պարզ և կանխատեսելի։
+                        <p class="text-start" style="color: #365897;">Fuel Solutions վառելիքի քարտերը գործում են Ռուսաստանի Դաշնության և ԱՊՀ երկրների ավելի քան 20.000 լցակայաններում, ինչը հնարավորություն է տալիս մեր հաճախորդներին լիցքավորել մեքենան՝ անկախ գտնվելու վայրից։ Մեր լուծումները ապահովում են վերահսկելիություն, թափանցիկություն և ֆինանսական ճկունություն՝ դարձնելով վառելիքի կառավարումը պարզ և կանխատեսելի։
                     </p>
                 </header>
 
                 <!-- Research Statistics -->
                 <div class="stats-section">
-                    <h3 style="margin: 0 0 0.5rem 0; color: var(--text-primary); font-size: 1.3rem;">Մեր առավելությունները</h3>
+                    <h3 style="margin: 0 0 0.5rem 0; color: #D7A95A; font-size: 1.3rem;">Մեր առավելությունները</h3>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <span class="stat-number">20.000+ լցակայաններ</span>
@@ -580,7 +677,7 @@
                 <!-- Citations Dropdown Section -->
                 <section class="citations-section">
                     <div class="citations-header" id="citations-header">
-                        <h3 class="citations-title">Ինչո՞ւ ընտրել Fuel Solutions</h3>
+                        <h3 class="citations-title" style="color: #D7A95A;">Ինչո՞ւ ընտրել Fuel Solutions</h3>
                         <span class="dropdown-icon" id="dropdown-icon">▼</span>
                     </div>
                     <div class="citations-content" id="citations-content">
@@ -588,48 +685,48 @@
                             <div class="citation-item">
                                 <span class="citation-number">[1]</span>
                                 <span class="citation-text">Անհատականացված լուծումներ</span>
-                                <div class="citation-note">Մեր վառելիքի քարտերն ու առաջարկները ձևավորվում են հարմարեցված ձեր բիզնեսի կամ անհատական պահանջներին, ապահովելով առավելագույն արդյունավետություն։</div>
+                                <div class="citation-note">Մեր վառելիքի քարտերն ու առաջարկները հարմարեցվում են ձեր բիզնեսի և անհատական պահանջներին՝ ապահովելով առավելագույն արդյունավետություն։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[2]</span>
-                                <span class="citation-text">Աշխատանք ապահովված և բարդ պայմաններով</span>
+                                <span class="citation-text">Անհատական մոտեցում</span>
                                 <div class="citation-note">Մենք առաջարկում ենք անհատական զեղչեր, ֆակտորինգային ծառայություններ և երկարաժամկետ համաձայնագրեր՝ ամուր գործընկերություն կառուցելու համար։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[3]</span>
                                 <span class="citation-text">Մասնագիտական խորհրդատվություն</span>
-                                <div class="citation-note">Մեր թիմը տրամադրում է մանրամասն խորհրդատվություն բոլոր հարցերի վերաբերյալ՝ վառելիքի կառավարման, հաշվետվությունների և օպտիմալացման ոլորտում։</div>
+                                <div class="citation-note">Մեր թիմը տրամադրում է մանրամասն խորհրդատվություն բոլոր հարցերի վերաբերյալ՝ վառելիքի կառավարում, վառելիքի գնային փոփոխություն, հաշվետվությունների ստեղծում և թվային համակարգի օգտագործում։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[4]</span>
                                 <span class="citation-text">Լայն տարածաշրջանային ծածկույթ</span>
-                                <div class="citation-note">Fuel Solutions վառելիքի քարտերը գործում են ամբողջ Ռուսաստանում և որոշ ԱՊՀ երկրներում, ապահովելով վերահսկելիություն և ճկունություն ցանկացած տեղում։</div>
+                                <div class="citation-note">Fuel Solutions վառելիքի քարտերը գործում են Ռուսաստանի Դաշնությունում և ԱՊՀ երկրներում՝ ապահովելով վերահսկելիություն և ճկունություն ցանկացած տեղում։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[5]</span>
                                 <span class="citation-text">Արագ և հարմար օգտագործում</span>
-                                <div class="citation-note">Քարտերն արագ ակտիվանում են և հեշտությամբ օգտագործվում ցանկացած վառելիքի կայանում, առանց բյուրոկրատիայի։</div>
+                                <div class="citation-note">Քարտերն արագ ակտիվանում են և հեշտությամբ օգտագործվում ցանկացած վառելիքի կայանում, առանց խտրականության։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[6]</span>
                                 <span class="citation-text">Թափանցիկ և վերահսկելի ֆինանսներ</span>
-                                <div class="citation-note">Ձեր վառելիքի ծախսերը վերահսկելի են, յուրաքանչյուր գործարք հաշվետու է և հասանելի մանրամասն հաշվետվությամբ։</div>
+                                <div class="citation-note">Ձեր վառելիքի ծախսերը վերահսկվում են, յուրաքանչյուր գործարք գրանցվում է և հասանելի է մանրամասն հաշվետվություն։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[7]</span>
-                                <span class="citation-text">Պարտականությունների նվազեցում</span>
-                                <div class="citation-note">Մեր քարտերը նվազեցնում են ստրեսը և բյուրոկրատիան բիզնեսի և անձնական վառելիքի ծախսերում։</div>
+                                <span class="citation-text">Անվտանգ և ապահով</span>
+                                <div class="citation-note">Մեր քարտերը պաշտպանվախ են PIN կոդով, որը հասանելի է միայն քարտապանին։</div>
                             </div>
 
                             <div class="citation-item">
                                 <span class="citation-number">[8]</span>
-                                <span class="citation-text">Տեխնոլոգիական առաջընթաց և անվտանգություն</span>
+                                <span class="citation-text">Ժամանակակից և նորարարական լուծումներ</span>
                                 <div class="citation-note">Մենք օգտագործում ենք ժամանակակից տեխնոլոգիաներ, որոնք ապահովում են արագ գործարքներ, անվտանգության բարձր մակարդակ և տվյալների պաշտպանություն։</div>
                             </div>
                         </div>
@@ -638,45 +735,109 @@
             </div>
 
         <section class="loop-images" style="--bg: white;">
-            <h1 style="margin-bottom: 50px; color:#3C8DBC">Մեր հաճախորդները</h1>
-            <div class="carousel-track" style="--time: 60s; --total: 12;">
-                <div class="carousel-item" style="--i: 1;">
-                    <img src="img/ararat.jpg" alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 2;">
-                    <img src="img/gyumri_fish.jpg"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 3;">
-                    <img src="img/logist.png"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 4;">
-                    <img src="img/bk.png"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 5;">
-                    <img src="img/isr.png"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 6;">
-                    <img src="img/auto-mjm.png"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 7;">
-                    <img src="img/mavent.png"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 8;">
-                    <img src="img/araqs.webp"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 9;">
-                    <img src="img/armos.jpg"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 10;">
-                    <img src="img/roadlink.jpg"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 11;">
-                    <img src="img/vet-farm.png"  alt="image">
-                </div>
-                <div class="carousel-item" style="--i: 12;">
-                    <img src="img/man-tur.jpg"  alt="image">
+            <h1 style="margin-bottom: 50px; color:#003274">Մեր հաճախորդները</h1>
+            <div class="uslider">
+                <div class="uslide-track">
+                    <div class="uslide">
+                        <img src="img/man-tur.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/vet-farm.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/roadlink.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/armos.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/araqs.webp" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/mavent.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/isr.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/bk.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/gyumri_fish.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/ararat.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/man-tur.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/vet-farm.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/roadlink.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/armos.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/araqs.webp" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/mavent.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/isr.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/bk.png" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/gyumri_fish.jpg" height="200" width="250" alt="" />
+                    </div>
+                    <div class="uslide">
+                        <img src="img/ararat.jpg" height="200" width="250" alt="" />
+                    </div>
                 </div>
             </div>
+<!--            <div class="carousel-track" style="--time: 60s; --total: 12;">-->
+<!--                <div class="carousel-item" style="--i: 1;">-->
+<!--                    <img src="img/ararat.jpg" alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 2;">-->
+<!--                    <img src="img/gyumri_fish.jpg"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 3;">-->
+<!--                    <img src="img/logist.png"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 4;">-->
+<!--                    <img src="img/bk.png"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 5;">-->
+<!--                    <img src="img/isr.png"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 6;">-->
+<!--                    <img src="img/auto-mjm.png"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 7;">-->
+<!--                    <img src="img/mavent.png"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 8;">-->
+<!--                    <img src="img/araqs.webp"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 9;">-->
+<!--                    <img src="img/armos.jpg"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 10;">-->
+<!--                    <img src="img/roadlink.jpg"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 11;">-->
+<!--                    <img src="img/vet-farm.png"  alt="image">-->
+<!--                </div>-->
+<!--                <div class="carousel-item" style="--i: 12;">-->
+<!--                    <img src="img/man-tur.jpg"  alt="image">-->
+<!--                </div>-->
+<!--            </div>-->
         </section>
 
 
