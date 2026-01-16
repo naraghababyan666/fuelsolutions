@@ -322,16 +322,16 @@
 
         <section class="jumbotron text-center mt-5">
             <div class="container">
-                <h1 class="jumbotron-heading">Վառելիքի քարտեր</h1>
-                <p class="lead text-muted">Ընտրեք ձեզ համար լավագույն առաջարկով վառելիքի քարտ</p>
-                <p class="lead text-muted">Եթե չգիտեք, թե որն է հարմար, թողեք հարցում՝ մենք կտրամադրենք մանրամասն
+                <h1 class="jumbotron-heading" style="color: #14295D !important;">Վառելիքի քարտեր</h1>
+                <p class="lead text-muted" style="color: #04184a !important;">Ընտրեք ձեզ համար լավագույն առաջարկով վառելիքի քարտ</p>
+                <p class="lead text-muted" style="color: #04184a !important;">Եթե չգիտեք, թե որն է հարմար, թողեք հարցում՝ մենք կտրամադրենք մանրամասն
                     խորհրդատվություն։</p>
             </div>
         </section>
         <div class="container marketing"> <!-- Three columns of text below the carousel -->
             <hr class="featurette-divider">
             <div class="row featurette">
-                <div class="col-md-7"><h2 class="featurette-heading fw-normal lh-1">СТР</h2>
+                <div class="col-md-7"><h2 class="featurette-heading fw-normal lh-1" style="color: #14295D;">СТР</h2>
                     <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting
                         prose
                         here.</p></div>
@@ -341,7 +341,7 @@
             </div>
             <hr class="featurette-divider">
             <div class="row featurette">
-                <div class="col-md-7 order-md-2"><h2 class="featurette-heading fw-normal lh-1">СТР</h2>
+                <div class="col-md-7 order-md-2"><h2 class="featurette-heading fw-normal lh-1" style="color: #14295D;">СТР</h2>
                     <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of
                         how
                         this
@@ -375,7 +375,7 @@
                         Մեր արժեքներն են վստահելիությունը, անվտանգությունը, նորարարությունը և հաճախորդակենտրոն մոտեցումը։ Մենք մշտապես զարգացնում ենք մեր համակարգերը՝ ապահովելով կայուն, արդյունավետ և ժամանակակից լուծումներ մեր գործընկերների համար։
                     </p>
                     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Մեր մասին
+                        <button type="button" class="btn btn-outline-warning btn-lg px-4 me-sm-3 fw-bold">Մեր մասին
                         </button>
                         <button type="button" class="btn btn-outline-light btn-lg px-4">Կապ</button>
                     </div>

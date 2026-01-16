@@ -279,6 +279,8 @@
             </div>
         </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=07e039d0-e275-4386-acb4-a45d7ddf1f3e&lang=ru_RU"></script>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A55dd5d3cc638b167cd92bdec30c76c04a9a704ae1c9192cbafe4c1b349cac442&amp;source=constructor" width="100%" height="700" frameborder="0"></iframe>
 
     <!-- Template Javascript -->
         <script src="js/main.js"></script>

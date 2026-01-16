@@ -105,7 +105,7 @@
             <h3 class="text-white mb-4">Կոնտակներ</h3>
             <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2" style="color:#A27751 !important;"></i>Ք․ Երևան, Հրաչյա Քոչար 228/1</p>
             <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2" style="color:#A27751 !important;"></i>info@fuelsolutions.group</p>
-            <p class="mb-0"><i class="bi bi-telephone text-primary me-2" style="color:#A27751 !important;"></i>+374 12 777-797</p>
+            <p class="mb-0"><i class="bi bi-telephone text-primary me-2" style="color:#A27751 !important;"></i><a href="tel:+37412777797" style="color: white">+374 12 777-797</a></p>
         </div>
         <div class="col-lg-4 col-md-4">
             <h3 class="text-white mb-4">Հետևեք մեզ</h3>
@@ -125,3 +125,5 @@
     </p>
 </div>
 <!-- Footer End -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
